@@ -1,0 +1,33 @@
+.error-message
+  position: fixed                       // Zůstane na místě, i když scrolluješ
+  top: 1rem                            // 1rem od horního okraje stránky
+  left: 50%                            // Horizontálně uprostřed
+  transform: translateX(-50%)         // Posune to opravdu doprostřed (protože 50 % odleva neznamená střed elementu)
+  background-color: #ffe0e0           // Světle červené pozadí – značí chybu
+  color: #b10000                      // Text je tmavě červený – typická barva chyb
+  padding: 1rem 2rem                  // Vnitřní odsazení – ať to má vzduch
+  border: 1px solid #ffaaaa           // Rámeček – světlá červená
+  border-radius: 8px                  // Zaoblené rohy – vypadá přátelsky
+  font-size: 0.95rem                  // Trochu menší než základní text
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) // Mírný stín – dává hloubku
+  z-index: 1000                       // Zajišťuje, že to bude nahoře (nad ostatními prvky)
+
+#toast-container
+  position: fixed                     // Je to připnuté k určitému místu na obrazovce
+  top: 1rem                          // 1rem od horního okraje
+  right: 1rem                        // 1rem od pravého okraje
+  z-index: 9999                      // Super nahoře – překoná skoro všechno
+  display: flex                      // Flexbox – umožňuje hezky řadit toasty
+  flex-direction: column             // Řadí to zprávy pod sebe
+  gap: 0.5rem                        // Mezera mezi jednotlivými toasty
+
+
+.toast
+  background-color: #333             // Tmavé pozadí (můžeš měnit na zelenou/červenou přes JS)
+  color: #fff                        // Bílý text – kontrast
+  padding: 0.75rem 1rem              // Vnitřní odsazení – ať to není nalepené
+  border-radius: 8px                 // Zaoblené rohy
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2) // Jemný stín pod elementem
+  opacity: 1                         // Viditelnost (pro přechody třeba fade out/in)
+  pointer-events: none              // Kliknutí to propustí dál – toast se nechytá kurzoru
+  transition: opacity 0.3s ease      // Kdybys někdy měnila opacity v JS, tak to bude plynulé
