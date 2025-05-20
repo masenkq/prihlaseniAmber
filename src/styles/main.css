@@ -3,7 +3,7 @@
   text-align: center;
   margin: 0.5rem 0 1rem 0;
   position: relative;
-  color: #666;
+  color: var(--Cdivider);
 }
 .divider::before, .divider::after {
   position: absolute;
@@ -11,7 +11,7 @@
   top: 50%;
   width: 40%;
   height: 1px;
-  background-color: #ccc;
+  background-color: var(--Cline);
 }
 .divider::before {
   left: 0;
@@ -30,22 +30,22 @@
   font-weight: 600;
   text-align: left;
   padding-left: 5px;
-  color: #333;
+  color: var(--Cform-label);
 }
 .form-container input[type=email],
 .form-container input[type=password],
 .form-container input[type=text] {
   width: 100%;
   padding: 0.7rem 2.5rem 0.7rem 0.7rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--Cline);
   border-radius: 2px;
-  background-color: #fff;
+  background-color: var(--Cbackground);
   outline: none;
   box-sizing: border-box;
   margin-bottom: 0.6rem;
 }
 .form-container input:focus {
-  border-color: #aaa;
+  border-color: var(--Cborder);
 }
 
 .password-wrapper {
@@ -55,12 +55,12 @@
   width: 100%;
   padding-right: 2.5rem;
   border-radius: 8px;
-  background-color: #d3e2e8;
-  border: 1px solid #ccc;
+  background-color: var(--Cpassbgr);
+  border: 1px solid var(--Cline);
   outline: none;
 }
 .password-wrapper input:focus {
-  border-color: #aaa;
+  border-color: var(--Cborder);
 }
 .password-wrapper button {
   position: absolute;
@@ -131,6 +131,18 @@ textarea:not([rows]) {
   min-height: 10em;
 }
 
+html {
+  --Cdivider: #666;
+  --Cuser: #333;
+  --Cline: #ccc;
+  --Cbackground: #fff;
+  --Cborder: #aaa;
+  --Cpassbgr: #d3e2e8;
+  --Cform-label: #333;
+  --Cblue: #004d80;
+  --Cpink: #c0004d;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #d0dde5;
@@ -166,44 +178,9 @@ header {
   gap: 1.2rem;
 }
 
-.btn {
-  padding: 0.7rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 0 auto;
-  display: block;
-}
-
-.primary {
-  background-color: #c0004d;
-  color: white;
-}
-
-.secondary {
-  background-color: #004d80;
-  color: white;
-}
-
+/* hvezdicka u hesla a emailu */
 .required {
   color: red;
-}
-
-.forgot-password,
-.forgot {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #444;
-  text-align: left;
-  text-decoration: none;
-}
-
-.forgot-password:hover,
-.forgot:hover {
-  text-decoration: underline;
 }
 
 .toggle-password {
@@ -222,7 +199,7 @@ header {
 .existing-user {
   font-size: 0.85rem;
   margin-top: 1.5rem;
-  color: #333;
+  color: var(--Cuser);
 }
 
 footer {
@@ -231,6 +208,37 @@ footer {
 
 .footer-img {
   height: 60px;
+}
+
+.btn {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.primary {
+  background-color: var(--Cpink);
+  color: white;
+}
+
+.secondary {
+  background-color: var(--Cblue);
+  color: white;
+}
+
+.forgot-password,
+.forgot {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--Cuser);
+  text-align: left;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

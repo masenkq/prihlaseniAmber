@@ -1,3 +1,14 @@
+html
+  --Cdivider: #666
+  --Cuser: #333
+  --Cline: #ccc
+  --Cbackground: #fff
+  --Cborder: #aaa
+  --Cpassbgr: #d3e2e8
+  --Cform-label: #333
+  --Cblue: #004d80
+  --Cpink: #c0004d
+
 body
   font-family: Arial, sans-serif
   background-color: #d0dde5
@@ -17,61 +28,22 @@ header
 
 .logo,
 .main-logo
-
   width: auto
   margin-bottom: 0
-
 
 .login-container
   max-width: 400px
   margin: auto
   padding: 2rem 1rem
 
-
 .login-fields
   display: flex
   flex-direction: column
   gap: 1.2rem /* trochu větší mezera mezi poli (email, heslo) */
 
-
-
-.btn
-  padding: 0.7rem
-  border: none
-  border-radius: 30px
-  cursor: pointer
-  font-weight: bold
-  font-size: 1rem
-  margin: 0 auto
-  display: block
-
-
-.primary
-  background-color: #c0004d
-  color: white
-
-
-.secondary
-  background-color: #004d80
-  color: white
-
+/* hvezdicka u hesla a emailu */
 .required
   color: red
-
-
-.forgot-password,
-.forgot
-  display: block
-  margin-top: 0.5rem
-  font-size: 0.9rem
-  color: #444
-  text-align: left
-  text-decoration: none
-
-
-.forgot-password:hover,
-.forgot:hover
-  text-decoration: underline
 
 .toggle-password
   position: absolute
@@ -88,12 +60,10 @@ header
 .existing-user
   font-size: 0.85rem
   margin-top: 1.5rem
-  color: #333
-
+  color: var(--Cuser)
 
 footer
   margin-top: 2rem
-
 
 .footer-img
   height: 60px
