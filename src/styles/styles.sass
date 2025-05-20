@@ -1,0 +1,100 @@
+body
+  font-family: Arial, sans-serif
+  background-color: #d0dde5
+  margin: 0
+  padding: 0
+  text-align: center
+
+
+header
+  background-color: white
+  padding: 0.5rem 1rem /* menší padding nahoře/dole */
+  height: 50px         /* pevná výška, aby nebyl moc velký */
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.logo,
+.main-logo
+
+  width: auto
+  margin-bottom: 0
+
+
+.login-container
+  max-width: 400px
+  margin: auto
+  padding: 2rem 1rem
+
+
+.login-fields
+  display: flex
+  flex-direction: column
+  gap: 1.2rem /* trochu větší mezera mezi poli (email, heslo) */
+
+
+
+.btn
+  padding: 0.7rem
+  border: none
+  border-radius: 30px
+  cursor: pointer
+  font-weight: bold
+  font-size: 1rem
+  margin: 0 auto
+  display: block
+
+
+.primary
+  background-color: #c0004d
+  color: white
+
+
+.secondary
+  background-color: #004d80
+  color: white
+
+.required
+  color: red
+
+
+.forgot-password,
+.forgot
+  display: block
+  margin-top: 0.5rem
+  font-size: 0.9rem
+  color: #444
+  text-align: left
+  text-decoration: none
+
+
+.forgot-password:hover,
+.forgot:hover
+  text-decoration: underline
+
+.toggle-password
+  position: absolute
+  right: 10px
+  top: 50%
+  transform: translateY(-50%)
+  cursor: pointer
+  background: none
+  border: none
+  font-size: 1.2rem
+  user-select: none
+  padding: 0
+
+.existing-user
+  font-size: 0.85rem
+  margin-top: 1.5rem
+  color: #333
+
+
+footer
+  margin-top: 2rem
+
+
+.footer-img
+  height: 60px
+
