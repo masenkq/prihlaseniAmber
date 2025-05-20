@@ -45,6 +45,7 @@ function validateForm(event) {
     }
 
     showToast('Úspěšně přihlášeno!', true);
+    event.preventDefault();
 
 }
 
