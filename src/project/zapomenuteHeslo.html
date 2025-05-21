@@ -2,66 +2,46 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Zapomenuté heslo</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 50px;
-        }
-        form {
-            background: white;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        input {
-            padding: 10px;
-            margin-top: 10px;
-            width: 100%;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #004d80;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .info {
-            margin-top: 20px;
-            color: green;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapomenuté heslo – Moje Amber</title>
+    <link rel="stylesheet" href="../../dist/css/main.css">
 </head>
 <body>
 
-<form id="resetForm">
-    <h2>Zapomenuté heslo</h2>
-    <label for="email">Zadejte svůj e-mail:</label>
-    <input type="email" id="email" required>
-    <button type="submit">Obnovit heslo</button>
-</form>
+<header>
+    <img src="../../img/logoHeader.svg" alt="Amber Plasma logo" class="logo">
+</header>
 
+<main class="login-container">
+    <img src="../../img/mojeAmberKey.svg" alt="Moje Amber" class="main-logo">
 
-<p class="info" id="infoText" style="display: none;">
-    Odkaz na obnovení hesla byl odeslán na váš e-mail. ✉️
-</p>
+    <form class="form-container">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="zadejte svůj e-mail" required>
 
-<script>
-    document.getElementById("resetForm").addEventListener("submit", function(e) {
-        e.preventDefault(); // zabrání reloadu stránky
-        // tady by normálně byl fetch nebo volání API
-        document.getElementById("infoText").style.display = "block";
-        document.getElementById("resetForm").style.display = "none";
-    });
-</script>
+        <p class="forgot">
+            Zadejte svůj email a my vám pošleme odkaz pro obnovení hesla.
+        </p>
 
+        <button type="submit" class="btn primary">Obnovit heslo</button>
+
+        <a href="index.html" class="forgot-password">← Zpět na přihlášení</a>
+    </form>
+
+    <div class="divider">
+        <span>nebo</span>
+    </div>
+
+    <button class="btn secondary">Vytvořit nový účet</button>
+
+</main>
+
+<footer>
+    <img src="../../img/handDrop.svg" alt="Daruj plazmu" class="footer-img">
+</footer>
+
+<div id="toast-container"></div>
+
+<script src="../../dist/bundle.js"></script>
 </body>
 </html>

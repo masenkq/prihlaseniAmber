@@ -27,7 +27,7 @@
 
         <div class="password-wrapper">
             <input type="password" id="password" name="password" placeholder="*******" required>
-            <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            <span class="toggle-password" id="toggle-password">👁️</span>
         </div>
 
         <a href="zapomenuteHeslo.html" class="forgot-password">Zapomenuté heslo</a>
@@ -40,7 +40,7 @@
     </div>
     <button class="btn secondary">Vytvořit nový účet</button>
     <p class="existing-user">
-        Jste náš stávající dárce a nemůžete <br>se přihlásit? <a href="#">Klikněte zde</a> a nastavte si heslo.
+        Jste náš stávající dárce a nemůžete <br>se přihlásit? <a href="zapomenuteHeslo.html">Klikněte zde</a> a nastavte si heslo.
     </p>
 </main>
 
@@ -48,6 +48,7 @@
     <img src="../../img/handDrop.svg" alt="Daruj plazmu" class="footer-img">
 </footer>
 <div id="toast-container"></div>
-<script src="../script.js"></script>
+<script src="../../dist/bundle.js"></script>
+
 </body>
 </html>
